@@ -339,66 +339,38 @@ F 3 "" H 8100 4150 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	8300 4050 8400 4050
-$Comp
-L ESP8266:ESP-01v090 U1
-U 1 1 5FA3079A
-P 8400 2600
-F 0 "U1" H 8400 3115 50  0000 C CNN
-F 1 "ESP-01v090" H 8400 3024 50  0000 C CNN
-F 2 "ESP8266:ESP-01" H 8400 2600 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 8400 2600 50  0001 C CNN
-	1    8400 2600
-	1    0    0    -1  
-$EndComp
-Text Label 7200 2650 0    50   ~ 0
+Text Label 9600 2150 0    50   ~ 0
 GPIO0
 Wire Wire Line
-	7200 2650 7450 2650
-Wire Wire Line
-	7050 2450 7050 2600
+	9350 2150 9600 2150
 $Comp
 L power:GND #PWR0103
 U 1 1 5FCF92F0
-P 7050 2600
-F 0 "#PWR0103" H 7050 2350 50  0001 C CNN
-F 1 "GND" H 7055 2427 50  0000 C CNN
-F 2 "" H 7050 2600 50  0001 C CNN
-F 3 "" H 7050 2600 50  0001 C CNN
-	1    7050 2600
+P 9950 2050
+F 0 "#PWR0103" H 9950 1800 50  0001 C CNN
+F 1 "GND" H 9955 1877 50  0000 C CNN
+F 2 "" H 9950 2050 50  0001 C CNN
+F 3 "" H 9950 2050 50  0001 C CNN
+	1    9950 2050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7050 2450 7450 2450
 $Comp
 L power:+3.3V #PWR0106
 U 1 1 5FD3ABA1
-P 9850 2450
-F 0 "#PWR0106" H 9850 2300 50  0001 C CNN
-F 1 "+3.3V" H 9865 2623 50  0000 C CNN
-F 2 "" H 9850 2450 50  0001 C CNN
-F 3 "" H 9850 2450 50  0001 C CNN
-	1    9850 2450
+P 6950 1800
+F 0 "#PWR0106" H 6950 1650 50  0001 C CNN
+F 1 "+3.3V" H 6965 1973 50  0000 C CNN
+F 2 "" H 6950 1800 50  0001 C CNN
+F 3 "" H 6950 1800 50  0001 C CNN
+	1    6950 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9350 2750 9600 2750
-Wire Wire Line
-	9850 2750 9850 2450
-Text Label 7200 2750 0    50   ~ 0
+Text Label 9600 2250 0    50   ~ 0
 RX
-Text Label 9600 2450 0    50   ~ 0
+Text Label 7100 1950 0    50   ~ 0
 TX
 Wire Wire Line
-	7200 2750 7450 2750
-Wire Wire Line
-	9350 2450 9600 2450
-Wire Wire Line
-	9350 2550 9600 2550
-Wire Wire Line
-	9600 2550 9600 2750
-Connection ~ 9600 2750
-Wire Wire Line
-	9600 2750 9850 2750
+	9350 2250 9600 2250
 $Comp
 L power:GND #PWR0107
 U 1 1 5FD487B8
@@ -533,8 +505,6 @@ Text Label 5550 3500 0    50   ~ 0
 3V3
 Text Label 5550 3400 0    50   ~ 0
 AREF
-Text Label 5550 2500 0    50   ~ 0
-5V
 Text Label 5550 2300 0    50   ~ 0
 GND
 Text Label 4300 2400 0    50   ~ 0
@@ -544,15 +514,11 @@ Wire Wire Line
 Wire Wire Line
 	5250 2300 5550 2300
 Wire Wire Line
-	5250 2500 5550 2500
-Wire Wire Line
 	5250 3400 5550 3400
 Wire Wire Line
 	5250 3500 5550 3500
 Text Label 6850 5000 3    50   ~ 0
 AREF
-Text Label 6950 5000 3    50   ~ 0
-5V
 Text Label 7050 5000 3    50   ~ 0
 3V3
 Text Label 7150 5000 3    50   ~ 0
@@ -563,8 +529,6 @@ Wire Wire Line
 	6750 4700 6750 5000
 Wire Wire Line
 	6850 4700 6850 5000
-Wire Wire Line
-	6950 4700 6950 5000
 Wire Wire Line
 	7050 4700 7050 5000
 Wire Wire Line
@@ -614,4 +578,30 @@ Wire Wire Line
 	3550 2500 4550 2500
 Wire Wire Line
 	3550 2100 3550 1950
+$Comp
+L ESP8266:ESP-01v090 U1
+U 1 1 5FDDD9EA
+P 8400 2100
+F 0 "U1" H 8400 2615 50  0000 C CNN
+F 1 "ESP-01v090" H 8400 2524 50  0000 C CNN
+F 2 "ESP8266:ESP-01" H 8400 2100 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 8400 2100 50  0001 C CNN
+	1    8400 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 1950 7100 1950
+Wire Wire Line
+	9950 1950 9950 2050
+Wire Wire Line
+	9350 1950 9950 1950
+Wire Wire Line
+	6950 2050 6950 1800
+Wire Wire Line
+	6950 2050 7450 2050
+Wire Wire Line
+	6950 2250 6950 2050
+Wire Wire Line
+	6950 2250 7450 2250
+Connection ~ 6950 2050
 $EndSCHEMATC
